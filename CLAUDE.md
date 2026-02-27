@@ -1,7 +1,7 @@
 # Portfolio Héctor González - Contexto del Proyecto
 
 ## Propietario
-Héctor González - Líder en Automatización de Procesos Freelancer
+Héctor González - Líder de Automatización Inteligente | Low-code / No-code | IA con Copilot, Gemini, Claude, ChatGPT | RPA (UiPath, BluePrism) - Freelancer
 Email: hgonzalez.contador@gmail.com
 WhatsApp: +54 9 11 5586-8226
 LinkedIn: https://www.linkedin.com/in/hectorgonzalezart
