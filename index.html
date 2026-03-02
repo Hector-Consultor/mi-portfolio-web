@@ -278,7 +278,7 @@
 
     .hero-subtitle {
       font-size: clamp(0.85rem, 1.5vw, 1rem);
-      color: var(--text-muted);
+      color: #00d4ff;
       max-width: 480px;
       margin-bottom: 40px;
     }
@@ -433,15 +433,56 @@
 
     .about-text p strong { color: var(--text); font-weight: 600; }
 
-    .about-tagline {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--accent2);
-      letter-spacing: 0.04em;
-      line-height: 1.6;
-      padding-bottom: 4px;
+    .about-formacion {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0;
+      padding-bottom: 16px;
       border-bottom: 1px solid var(--border);
       margin-bottom: 4px;
+    }
+    .formacion-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 16px;
+      flex: 1;
+      min-width: 160px;
+    }
+    .formacion-item:first-child { padding-left: 0; }
+    .formacion-icon {
+      font-size: 1rem;
+      flex-shrink: 0;
+      color: #00d4ff;
+      filter: drop-shadow(0 0 6px #00d4ff);
+    }
+    .formacion-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .formacion-titulo {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+    .formacion-uni {
+      font-size: 0.68rem;
+      color: rgba(0, 212, 255, 0.6);
+      line-height: 1.2;
+    }
+    .formacion-sep {
+      width: 1px;
+      height: 34px;
+      background: rgba(0, 212, 255, 0.15);
+      flex-shrink: 0;
+    }
+    @media (max-width: 768px) {
+      .about-formacion { flex-direction: column; gap: 8px; }
+      .formacion-sep { width: 100%; height: 1px; }
+      .formacion-item { padding: 4px 0; }
     }
 
     /* Differentiators block */
@@ -523,10 +564,10 @@
 
     .card {
       background: var(--bg3);
-      border: 1px solid var(--border);
+      border: 1px solid rgba(108,99,255,0.5);
       border-radius: var(--radius);
       padding: 36px 32px;
-      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+      transition: transform var(--transition), box-shadow var(--transition);
       position: relative;
       overflow: hidden;
     }
@@ -542,12 +583,19 @@
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(108,99,255,0.4);
-      box-shadow: 0 20px 48px rgba(0,0,0,0.4);
+      transform: translateY(-4px);
+      border-color: transparent;
+      background:
+        linear-gradient(var(--bg3), var(--bg3)) padding-box,
+        conic-gradient(from var(--ba), #6c63ff 0%, #00d4ff 40%, #6c63ff 60%, #00d4ff 100%) border-box;
+      animation: feat-border 4s linear infinite;
+      box-shadow:
+        0 0 28px rgba(108,99,255,0.22),
+        0 0 56px rgba(0,212,255,0.08),
+        0 20px 48px rgba(0,0,0,0.4);
     }
 
-    .card:hover::before { transform: scaleX(1); }
+    .card:hover::before { transform: scaleX(0); }
 
     .card-icon {
       width: 52px; height: 52px;
@@ -617,16 +665,10 @@
     }
 
     .card-featured {
-      border-color: transparent;
-      transition: transform var(--transition), box-shadow var(--transition);
-      background:
-        linear-gradient(var(--bg3), var(--bg3)) padding-box,
-        conic-gradient(from var(--ba), #6c63ff 0%, #00d4ff 40%, #6c63ff 60%, #00d4ff 100%) border-box;
-      box-shadow:
-        0 0 28px rgba(108,99,255,0.18),
-        0 0 56px rgba(0,212,255,0.07),
-        0 20px 48px rgba(0,0,0,0.35);
-      animation: feat-border 5s linear infinite;
+      border-color: rgba(0,212,255,0.5);
+      background: var(--bg3);
+      box-shadow: none;
+      animation: none;
     }
 
     .card-featured::before { display: none; }
@@ -634,10 +676,13 @@
     @keyframes feat-border { to { --ba: 360deg; } }
 
     @media (prefers-reduced-motion: reduce) {
-      .card-featured {
+      .card:hover {
         animation: none;
-        border-color: rgba(108,99,255,0.45);
+        border-color: rgba(108,99,255,0.5);
         background: var(--bg3);
+      }
+      .card-featured:hover {
+        border-color: rgba(0,212,255,0.5);
       }
     }
 
@@ -987,7 +1032,31 @@
     <div class="section-header fade-up">
       <span class="section-label">Sobre mí</span>
       <h2 class="section-title">La persona detrás de la automatización</h2>
-      <p class="about-tagline">Líder de Automatización Inteligente&nbsp;|&nbsp;Low-code / No-code&nbsp;|&nbsp;IA con Copilot, Gemini, Claude, ChatGPT&nbsp;|&nbsp;RPA (UiPath, BluePrism)</p>
+      <div class="about-formacion">
+        <div class="formacion-item">
+          <span class="formacion-icon">🎓</span>
+          <div class="formacion-info">
+            <span class="formacion-titulo">Licenciado en Contaduría Pública</span>
+            <span class="formacion-uni">Universidad del Zulia (LUZ)</span>
+          </div>
+        </div>
+        <div class="formacion-sep"></div>
+        <div class="formacion-item">
+          <span class="formacion-icon">🎓</span>
+          <div class="formacion-info">
+            <span class="formacion-titulo">Magíster en Gerencia de Empresas</span>
+            <span class="formacion-uni">Universidad del Zulia (LUZ)</span>
+          </div>
+        </div>
+        <div class="formacion-sep"></div>
+        <div class="formacion-item">
+          <span class="formacion-icon">🎓</span>
+          <div class="formacion-info">
+            <span class="formacion-titulo">Diplomatura en Transformación Digital</span>
+            <span class="formacion-uni">Universidad Técnica Nacional (UTN)</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="about-layout">
@@ -1235,32 +1304,80 @@
 
     <div class="tech-grid stagger fade-up">
 
+      <!-- Automatización -->
       <div class="tech-badge">
-        <div class="tech-icon" style="background:rgba(255,100,0,0.12); font-size:1.4rem;">🔶</div>
+        <div class="tech-icon" style="background:rgba(234,75,113,0.12);">
+          <img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" width="22" height="22">
+        </div>
         <div>
           <div class="tech-name">n8n</div>
           <div class="tech-level">Automatización avanzada</div>
         </div>
       </div>
 
+      <!-- Low-code Microsoft -->
       <div class="tech-badge">
-        <div class="tech-icon" style="background:rgba(108,99,255,0.12); font-size:1.4rem;">⚙️</div>
+        <div class="tech-icon" style="background:rgba(116,39,116,0.15); color:#742774; font-size:0.68rem; font-weight:700; letter-spacing:0.01em;">PP</div>
         <div>
-          <div class="tech-name">Make</div>
-          <div class="tech-level">Flujos visuales complejos</div>
+          <div class="tech-name">Power Platform</div>
+          <div class="tech-level">Low-code Microsoft</div>
         </div>
       </div>
 
+      <!-- Google Workspace -->
       <div class="tech-badge">
-        <div class="tech-icon" style="background:rgba(255,165,0,0.12); font-size:1.4rem;">⚡</div>
+        <div class="tech-icon" style="background:rgba(66,133,244,0.12); color:#4285F4; font-size:0.68rem; font-weight:700; letter-spacing:0.01em;">GW</div>
         <div>
-          <div class="tech-name">Zapier</div>
-          <div class="tech-level">Integraciones rápidas</div>
+          <div class="tech-name">Google Workspace</div>
+          <div class="tech-level">Productividad & Apps Script</div>
         </div>
       </div>
 
+      <!-- RPA empresarial -->
       <div class="tech-badge">
-        <div class="tech-icon" style="background:rgba(53,114,165,0.2); font-size:1.4rem;">🐍</div>
+        <div class="tech-icon" style="background:rgba(250,70,22,0.12);">
+          <img src="https://cdn.simpleicons.org/uipath/FA4616" alt="UiPath" width="22" height="22">
+        </div>
+        <div>
+          <div class="tech-name">UiPath</div>
+          <div class="tech-level">RPA empresarial</div>
+        </div>
+      </div>
+
+      <!-- RPA corporativo -->
+      <div class="tech-badge">
+        <div class="tech-icon" style="background:rgba(14,109,183,0.15); color:#0E6DB7; font-size:0.68rem; font-weight:700; letter-spacing:0.01em;">BP</div>
+        <div>
+          <div class="tech-name">Blue Prism</div>
+          <div class="tech-level">RPA corporativo</div>
+        </div>
+      </div>
+
+      <!-- IA Microsoft -->
+      <div class="tech-badge">
+        <div class="tech-icon" style="background:rgba(0,120,212,0.12); color:#0078D4; font-size:0.68rem; font-weight:700; letter-spacing:0.01em;">Co</div>
+        <div>
+          <div class="tech-name">Microsoft Copilot</div>
+          <div class="tech-level">IA Microsoft 365</div>
+        </div>
+      </div>
+
+      <!-- IA Google -->
+      <div class="tech-badge">
+        <div class="tech-icon" style="background:rgba(66,133,244,0.12);">
+          <img src="https://cdn.simpleicons.org/googlegemini/4285F4" alt="Google Gemini" width="22" height="22">
+        </div>
+        <div>
+          <div class="tech-name">Google Gemini</div>
+          <div class="tech-level">IA generativa Google</div>
+        </div>
+      </div>
+
+      <!-- Dev -->
+      <div class="tech-badge">
+        <div class="tech-icon" style="background:rgba(55,118,165,0.15);">
+          <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" width="22" height="22">
+        </div>
         <div>
           <div class="tech-name">Python</div>
           <div class="tech-level">Scripts & procesamiento</div>
@@ -1268,7 +1385,7 @@
       </div>
 
       <div class="tech-badge">
-        <div class="tech-icon" style="background:rgba(0,212,255,0.10); font-size:1.4rem;">🔌</div>
+        <div class="tech-icon" style="background:rgba(0,212,255,0.10); font-size:1.3rem;">🔌</div>
         <div>
           <div class="tech-name">REST APIs</div>
           <div class="tech-level">Integraciones a medida</div>
@@ -1276,7 +1393,7 @@
       </div>
 
       <div class="tech-badge">
-        <div class="tech-icon" style="background:rgba(0,200,83,0.10); font-size:1.4rem;">📡</div>
+        <div class="tech-icon" style="background:rgba(0,200,83,0.10); font-size:1.3rem;">📡</div>
         <div>
           <div class="tech-name">Webhooks</div>
           <div class="tech-level">Eventos en tiempo real</div>
@@ -1284,7 +1401,7 @@
       </div>
 
       <div class="tech-badge">
-        <div class="tech-icon" style="background:rgba(255,200,0,0.10); font-size:1.4rem;">🗄️</div>
+        <div class="tech-icon" style="background:rgba(255,200,0,0.10); font-size:1.3rem;">🗄️</div>
         <div>
           <div class="tech-name">SQL / NoSQL</div>
           <div class="tech-level">Bases de datos</div>
@@ -1292,7 +1409,7 @@
       </div>
 
       <div class="tech-badge">
-        <div class="tech-icon" style="background:rgba(108,99,255,0.15); font-size:1.1rem; color:#6c63ff; font-weight:700; letter-spacing:-0.03em;">CC</div>
+        <div class="tech-icon" style="background:rgba(108,99,255,0.15); font-size:1rem; color:#6c63ff; font-weight:700; letter-spacing:-0.03em;">CC</div>
         <div>
           <div class="tech-name">Claude Code</div>
           <div class="tech-level">IA generativa · Anthropic</div>
@@ -1300,7 +1417,7 @@
       </div>
 
       <div class="tech-badge">
-        <div class="tech-icon" style="background:rgba(16,163,127,0.12); font-size:1.4rem;">🤖</div>
+        <div class="tech-icon" style="background:rgba(16,163,127,0.12); color:#10A37F; font-size:0.68rem; font-weight:700; letter-spacing:0.01em;">OAI</div>
         <div>
           <div class="tech-name">OpenAI API</div>
           <div class="tech-level">IA en automatizaciones</div>
