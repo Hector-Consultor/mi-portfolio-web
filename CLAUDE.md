@@ -21,6 +21,9 @@ HTML5 + CSS Variables + JavaScript vanilla (sin frameworks)
 ## Responsive
 Mobile-first, breakpoints 768px y 480px
 
+## Ruta local
+C:\Users\halonso\claude\mi-primera-web
+
 ## Deploy
 GitHub: https://github.com/Hector-Consultor/mi-portfolio-web
 Netlify: https://hgautomation.netlify.app
