@@ -278,7 +278,7 @@
 
     .hero-subtitle {
       font-size: clamp(0.85rem, 1.5vw, 1rem);
-      color: #00d4ff;
+      color: var(--accent2);
       max-width: 480px;
       margin-bottom: 40px;
     }
@@ -454,7 +454,7 @@
     .formacion-icon {
       font-size: 1rem;
       flex-shrink: 0;
-      color: #00d4ff;
+      color: var(--accent2);
       filter: drop-shadow(0 0 6px #00d4ff);
     }
     .formacion-info {
@@ -465,7 +465,7 @@
     .formacion-titulo {
       font-size: 0.75rem;
       font-weight: 700;
-      color: #ffffff;
+      color: var(--text);
       line-height: 1.3;
     }
     .formacion-uni {
@@ -1302,10 +1302,10 @@
       </p>
     </div>
 
-    <div class="tech-grid stagger fade-up">
+    <div class="tech-grid stagger">
 
       <!-- Automatización -->
-      <div class="tech-badge">
+      <div class="tech-badge fade-up">
         <div class="tech-icon" style="background:rgba(234,75,113,0.12);">
           <img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" width="22" height="22">
         </div>
@@ -1316,7 +1316,7 @@
       </div>
 
       <!-- Low-code Microsoft -->
-      <div class="tech-badge">
+      <div class="tech-badge fade-up">
         <div class="tech-icon" style="background:rgba(116,39,116,0.15); color:#742774; font-size:0.68rem; font-weight:700; letter-spacing:0.01em;">PP</div>
         <div>
           <div class="tech-name">Power Platform</div>
@@ -1325,7 +1325,7 @@
       </div>
 
       <!-- Google Workspace -->
-      <div class="tech-badge">
+      <div class="tech-badge fade-up">
         <div class="tech-icon" style="background:rgba(66,133,244,0.12); color:#4285F4; font-size:0.68rem; font-weight:700; letter-spacing:0.01em;">GW</div>
         <div>
           <div class="tech-name">Google Workspace</div>
@@ -1334,7 +1334,7 @@
       </div>
 
       <!-- RPA empresarial -->
-      <div class="tech-badge">
+      <div class="tech-badge fade-up">
         <div class="tech-icon" style="background:rgba(250,70,22,0.12);">
           <img src="https://cdn.simpleicons.org/uipath/FA4616" alt="UiPath" width="22" height="22">
         </div>
@@ -1345,7 +1345,7 @@
       </div>
 
       <!-- RPA corporativo -->
-      <div class="tech-badge">
+      <div class="tech-badge fade-up">
         <div class="tech-icon" style="background:rgba(14,109,183,0.15); color:#0E6DB7; font-size:0.68rem; font-weight:700; letter-spacing:0.01em;">BP</div>
         <div>
           <div class="tech-name">Blue Prism</div>
@@ -1354,7 +1354,7 @@
       </div>
 
       <!-- IA Microsoft -->
-      <div class="tech-badge">
+      <div class="tech-badge fade-up">
         <div class="tech-icon" style="background:rgba(0,120,212,0.12); color:#0078D4; font-size:0.68rem; font-weight:700; letter-spacing:0.01em;">Co</div>
         <div>
           <div class="tech-name">Microsoft Copilot</div>
@@ -1363,7 +1363,7 @@
       </div>
 
       <!-- IA Google -->
-      <div class="tech-badge">
+      <div class="tech-badge fade-up">
         <div class="tech-icon" style="background:rgba(66,133,244,0.12);">
           <img src="https://cdn.simpleicons.org/googlegemini/4285F4" alt="Google Gemini" width="22" height="22">
         </div>
@@ -1374,7 +1374,7 @@
       </div>
 
       <!-- Dev -->
-      <div class="tech-badge">
+      <div class="tech-badge fade-up">
         <div class="tech-icon" style="background:rgba(55,118,165,0.15);">
           <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" width="22" height="22">
         </div>
@@ -1384,7 +1384,7 @@
         </div>
       </div>
 
-      <div class="tech-badge">
+      <div class="tech-badge fade-up">
         <div class="tech-icon" style="background:rgba(0,212,255,0.10); font-size:1.3rem;">🔌</div>
         <div>
           <div class="tech-name">REST APIs</div>
@@ -1392,7 +1392,7 @@
         </div>
       </div>
 
-      <div class="tech-badge">
+      <div class="tech-badge fade-up">
         <div class="tech-icon" style="background:rgba(0,200,83,0.10); font-size:1.3rem;">📡</div>
         <div>
           <div class="tech-name">Webhooks</div>
@@ -1400,7 +1400,7 @@
         </div>
       </div>
 
-      <div class="tech-badge">
+      <div class="tech-badge fade-up">
         <div class="tech-icon" style="background:rgba(255,200,0,0.10); font-size:1.3rem;">🗄️</div>
         <div>
           <div class="tech-name">SQL / NoSQL</div>
@@ -1408,7 +1408,7 @@
         </div>
       </div>
 
-      <div class="tech-badge">
+      <div class="tech-badge fade-up">
         <div class="tech-icon" style="background:rgba(108,99,255,0.15); font-size:1rem; color:#6c63ff; font-weight:700; letter-spacing:-0.03em;">CC</div>
         <div>
           <div class="tech-name">Claude Code</div>
@@ -1416,7 +1416,7 @@
         </div>
       </div>
 
-      <div class="tech-badge">
+      <div class="tech-badge fade-up">
         <div class="tech-icon" style="background:rgba(16,163,127,0.12); color:#10A37F; font-size:0.68rem; font-weight:700; letter-spacing:0.01em;">OAI</div>
         <div>
           <div class="tech-name">OpenAI API</div>
@@ -1484,7 +1484,7 @@
             <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
           </svg>
         </a>
-        <a href="https://github.com/hector-gonzalez" class="social-link" target="_blank" rel="noopener" title="GitHub">
+        <a href="https://github.com/Hector-Consultor" class="social-link" target="_blank" rel="noopener" title="GitHub">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
           </svg>
@@ -1568,6 +1568,7 @@
     const canvas = document.getElementById('heroCanvas');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
+    const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const VIOLET = '108,99,255';
     const CYAN   = '0,212,255';
@@ -1626,14 +1627,16 @@
       ctx.fillRect(0, 0, W, H);
 
       /* move nodes — wrap around edges */
-      for (const n of nodes) {
-        n.x += n.vx;
-        n.y += n.vy;
-        n.phase += n.pSpeed;
-        if (n.x < -20)    n.x = W + 20;
-        else if (n.x > W + 20) n.x = -20;
-        if (n.y < -20)    n.y = H + 20;
-        else if (n.y > H + 20) n.y = -20;
+      if (!REDUCED) {
+        for (const n of nodes) {
+          n.x += n.vx;
+          n.y += n.vy;
+          n.phase += n.pSpeed;
+          if (n.x < -20)    n.x = W + 20;
+          else if (n.x > W + 20) n.x = -20;
+          if (n.y < -20)    n.y = H + 20;
+          else if (n.y > H + 20) n.y = -20;
+        }
       }
 
       /* connection lines */
@@ -1708,9 +1711,9 @@
       }
 
       /* occasionally spawn a new particle */
-      if (Math.random() < 0.04) spawnParticle();
+      if (!REDUCED && Math.random() < 0.04) spawnParticle();
 
-      animId = requestAnimationFrame(frame);
+      if (!REDUCED) animId = requestAnimationFrame(frame);
     }
 
     /* debounced resize — reinit only if node count changed */
