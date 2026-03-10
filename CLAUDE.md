@@ -27,3 +27,25 @@ C:\Users\halonso\claude\mi-primera-web
 ## Deploy
 GitHub: https://github.com/Hector-Consultor/mi-portfolio-web
 Netlify: https://hgautomation.netlify.app
+
+## Skills disponibles para este proyecto
+
+| Skill | Uso |
+|---|---|
+| `copywriting` | Mejorar copy del hero, value props, CTAs |
+| `page-cro` | Optimizar conversión (layout, CTAs, call-to-action) |
+| `seo-audit` | Auditoría SEO técnica y contenidos |
+| `ai-seo` | Optimizar para búsqueda generativa (ChatGPT, Claude, Perplexity) |
+| `social-content` | Crear y repurposear contenido para LinkedIn, Twitter, etc. |
+
+## Conectores MCP activos en este proyecto
+
+- **Apify MCP** — investigar competidores, extraer datos web para casos de éxito
+- **ccusage** — monitorear costos de desarrollo
+
+## Comandos útiles para este proyecto
+
+- `/revisar` → análisis rápido de index.html (estilos, textos, links)
+- `/seo` → auditoría SEO completa del sitio
+- `/deploy` → push automático a Netlify
+- `/commit` → commit en español con mensaje automático
