@@ -48,4 +48,4 @@ Netlify: https://hgautomation.netlify.app
 - `/revisar` → análisis rápido de index.html (estilos, textos, links)
 - `/seo` → auditoría SEO completa del sitio
 - `/deploy` → push automático a Netlify
-- `/commit` → commit en español, luego: **Opción 1:** Claude hace automáticamente `git push origin main`. **Opción 2:** manualmente en PowerShell pegá: `git push origin main`
+- `/commit` → valida pasos del commit (status, diff, mensaje), pide confirmación y ejecuta `git push origin main` automáticamente, mostrando el resultado final
