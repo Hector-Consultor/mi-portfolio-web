@@ -49,3 +49,8 @@ Netlify: https://hgautomation.netlify.app
 - `/seo` → auditoría SEO completa del sitio
 - `/deploy` → push automático a Netlify
 - `/commit` → valida pasos del commit (status, diff, mensaje), pide confirmación y ejecuta `git push origin main` automáticamente, mostrando el resultado final
+
+## No explorar
+
+- `*.png`, `*.jpg`, `*.jpeg`, `*.ico`, `*.webp`, `*.svg` — assets visuales binarios; referenciarlos por nombre si se necesitan, nunca intentar leerlos
+- `*.woff`, `*.woff2`, `*.ttf` — fuentes binarias, sin valor para contexto de código
